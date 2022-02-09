@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 400;
+    height: 100%;
+}
+
+.wrapper{
+    background: #C0DBD9;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.header{
+    margin-bottom: 15px;
+}
+
+.header__inner{
+    background:#7FAFF7;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.header__modal-link{
+    background: #A5C7F9;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 30.5px 0 30.5px 30px;
+    padding: 8px 15px;
+    border:none;
+}
+.main{
+    flex: 1 1 auto;
+    margin-bottom: 100px;
+}
+
+.block-01{
+    /* min-height: 411px; */
+    background: #B3F95A;
+    display: grid;
+    grid-template-columns: minmax(auto, 390px) minmax(auto, 590px) minmax(auto, 198px);
+    grid-template-rows: repeat(2, minmax(198px, auto));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.block01__item{
+    background: #8AD191;
+    position: relative;
+}
+
+.item-01{
+    grid-area: 1/1/2/2;
+    
+}
+.item-01::before{
+    content:'1';
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 53px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item-02{
+    grid-area: 1/2/2/3;
+}
+.item-02::before{
+    content:'2';
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 53px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item-03{
+    grid-area: 1/3/2/4;
+}
+.item-03::before{
+    content:'3';
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 53px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.item-04{
+    grid-area: 2/1/3/3;
+}
+.item-04::before{
+    content:'4';
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 53px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.item-05{
+    grid-area: 2/3/3/4;
+}
+.item-05::before{
+    content:'5';
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 53px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.block-02 {
+    background:#88B5BF;
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+}
+.block-02__item {
+    min-height: 199px;
+    background:#0D89B0;
+    flex: 1 1 199px;
+    
+}
+
+
+.footer{
+}
+
+.footer__innner{
+    background:#7FAFF7;
+    height: 100px;
+}
+
+
+.modal {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    transition: opacity 200ms ease-in;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    -ms-transition: opacity 200ms ease-in;
+    -o-transition: opacity 200ms ease-in;
+}
+
+.modal:target {
+    opacity: 1; 
+	pointer-events: auto;
+    overflow-y: auto; 
+}
+
+.modal__dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+.modal__content {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    outline: 0;
+}
+.modal__header{
+    align-self: flex-end;
+    margin-bottom: 115px;
+}
+.close {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    color: #FFFFFF;
+    background: #7FAFF6;
+    border-radius: 5px;
+    padding: 8px 15px;
+    opacity: .5;
+    text-decoration: none;
+}
+.modal__body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+} 
+
+.modal__title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 53px;
+    line-height: 62px;
+    color: #000000;
+}
